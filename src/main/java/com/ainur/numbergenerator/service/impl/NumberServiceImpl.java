@@ -130,9 +130,7 @@ public class NumberServiceImpl implements NumberService {
                 flag = true;
                 numbers[i] = 0;
             } else if (i == 0 && numbers[i] == 13) { // первая буква номера
-                for (int j = 0; j < numbers.length; j++) {
-                    numbers[i] = 0;
-                }
+                Arrays.fill(numbers, 0);
             }
         }
     }
