@@ -7,5 +7,5 @@ public final class Constants {
 
     public static final String SYMBOLS = "ABEKMHOPCTYX";
     public static final int NUMBER_LENGTH = 7;
-    public static final String REGION = " 116 RUS";
+    public static final String REGION = "116 RUS";
 }
