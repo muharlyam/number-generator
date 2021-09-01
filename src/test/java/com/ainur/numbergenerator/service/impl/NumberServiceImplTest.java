@@ -31,7 +31,7 @@ class NumberServiceImplTest {
         test = service.getNextNumber();
         assertEquals(test, "A001AA 116 RUS");
 
-        // 1002 элемент
+        // 1002 элемент для проверки правильности изменения буквы
         for (int i = 0; i < 1000; i++) {
             service.getNextNumber();
         }
@@ -47,4 +47,15 @@ class NumberServiceImplTest {
 
     }
 
+    @Test
+    void getRandomNumber() {
+
+        int size = storage.size();
+
+        for (int i = 0; i < 1000; i++) {
+            service.getRandomNumber();
+        }
+
+        assertEquals(storage.size() - size, 1000);
+    }
 }

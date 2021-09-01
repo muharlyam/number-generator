@@ -66,8 +66,6 @@ public class NumberServiceImpl implements NumberService {
 
         char[] chars = new char[NUMBER_LENGTH];
 
-        log.info("{}", Arrays.toString(numbers));
-
         chars[0] = SYMBOLS.charAt(numbers[0]);
         chars[1] = (char) (numbers[3] + '0');
         chars[2] = (char) (numbers[4] + '0');
@@ -79,6 +77,8 @@ public class NumberServiceImpl implements NumberService {
         String number = new String(chars);
 
         increment();
+
+        log.info(number);
 
         return number + REGION;
 
@@ -101,6 +101,8 @@ public class NumberServiceImpl implements NumberService {
         chars[6] = ' ';
 
         String number = new String(chars);
+
+        log.info(number);
 
         return number + REGION;
 

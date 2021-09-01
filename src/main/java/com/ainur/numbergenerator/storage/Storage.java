@@ -25,4 +25,8 @@ public class Storage {
     public boolean contains(String number) {
         return numbersSet.contains(number);
     }
+
+    public int size() {
+        return numbersSet.size();
+    }
 }
